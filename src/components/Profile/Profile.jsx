@@ -1,31 +1,31 @@
 import PropTypes from 'prop-types';
 
-export const Profile = ({username, tag, location, avatar, stats}) => {
+export const Profile = ({username, tag, location, avatar, followers, views, likes }) => {
     return (
-        <div class="profile">
-      <div class="description">
+        <div className="profile">
+      <div className="description">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-          class="avatar"
+          src={avatar}
+          alt={username + 'avatar'}
+          className="avatar"
         />
-        <p class="name">Petra Marica</p>
-        <p class="tag">@pmarica</p>
-        <p class="location">Salvador, Brasil</p>
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
     
-      <ul class="stats">
+      <ul className="stats">
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">1000</span>
+          <span className="label">Followers</span>
+          <span className="quantity">{followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">2000</span>
+          <span className="label">Views</span>
+          <span className="quantity">{views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">3000</span>
+          <span className="label">Likes</span>
+          <span className="quantity">{likes}</span>
         </li>
       </ul>
     </div>
@@ -37,9 +37,7 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
   followers: PropTypes.number.isRequired,
   views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired
-  }).isRequired
+  likes: PropTypes.number.isRequired,
   };
