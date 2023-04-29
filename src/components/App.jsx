@@ -1,9 +1,16 @@
-// Компоненты всех заданий рендерятся на одной странице, 
-// внутри общего контейнера - корневого компонента <App>.
+import {Profile} from './Profile/Profile'
+
+import user from '../data'
+
 export const App = () => {
   return (
-    <div>
-    {/* <Profile /> */}
-    </div>
+    <>
+    <Profile
+     username={user.username}
+     tag={user.tag}
+     location={user.location}
+     avatar={user.avatar}
+     stats={user.stats} />
+    </>
   );
 };
