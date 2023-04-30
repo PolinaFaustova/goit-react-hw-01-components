@@ -20,16 +20,12 @@ export const Statistics = ({ title, stats }) => {
        }
 
        function randomColor() {
-        let red, green, blue;
-        do {
-          red = Math.floor(Math.random() * 256);
-          green = Math.floor(Math.random() * 256);
-          blue = Math.floor(Math.random() * 256);
-        } while (red === 255 && green === 255 && blue === 255 || red < 50 && green < 50);
-        return `rgb(${red}, ${green}, ${blue})`;
+        const colors = ['#FF4136', '#FF851B', '#FFDC00', '#2ECC40', '#0074D9', '#B10DC9', '#FF69B4', '#800080', '#FF4500', '#006400'];
+        const index = Math.floor(Math.random() * colors.length);
+        return colors[index];
       }
       
-
+      
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(PropTypes.shape),
