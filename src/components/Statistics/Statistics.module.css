@@ -50,14 +50,4 @@
     font-weight: 700;
   }
   
-  /* .item:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: 50px;
-    height: 3px;
-    background-color: #f5f5f5;
-    transform: translateY(-50%);
-  } */
   
